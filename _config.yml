@@ -4,4 +4,12 @@ server: false
 baseurl: /
 url: http://markdrago.github.com
 
-pygments: true
+future: false
+lsi: false
+pyments: true
+markdown: maruku
+permalink: data
+
+maruku:
+  use_tex: false
+  use_divs: false
