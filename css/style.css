@@ -356,13 +356,43 @@ img {
    Author: Mark Drago
    ========================================================================== */
 
-body { background-image: url('../img/limestone.jpg'); }
+body {
+    background-color: black;
+}
 
+header {
+    border-bottom: 5px solid black;
+}
 
+header .row {
+    background-color: #e0e0e0;
+}
 
+header h1 {
+    padding: 10px;
+    font-size: x-large;
+}
 
+header h2 {
+    padding: 5px 10px;
+    font-size: small;
+}
 
+header .linkgutter {
+    text-align: right;
+}
 
+div.main {
+    background-image: url('../img/limestone.jpg');
+}
+
+/* custom styles for mobile */
+@media handheld, only screen and (max-width: 767px) {
+    header .linkgutter {
+        text-align: left;
+        padding-left: 30px !important;
+    }
+}
 
 /* RESUME HTML5 BIOLERPLATE */
 

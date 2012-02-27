@@ -33,16 +33,33 @@
   <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
        chromium.org/developers/how-tos/chrome-frame-getting-started -->
   <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
-  <header>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="fourcol">
+                    <h1>Mark Drago's Blog</h1>
+                </div>
+                <div class="eightcol last linkgutter">
+                    linky things
+                </div>
+            </div>
+            <div class="row">
+                <div class="twelvecol subtitle">
+                    <h2>Musings on the constantly changing field of software engineering</h2>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div role="main" class="container">
+        <div class="row">
+            <div class="twelvecol main">
+                {{content}}
+            </div>
+        </div>
+    </div>
+    <footer>
 
-  </header>
-  <div role="main">
-      {{content}}
-  </div>
-  <footer>
-
-  </footer>
-
+    </footer>
 
   <!-- JavaScript at the bottom for fast page loading -->
 
