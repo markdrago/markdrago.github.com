@@ -1,3 +1,19 @@
+/* This file is a combination of the 1140 grid system, HTML5 boilerplate, and
+ * the custom styles for this site.  Each section is clearly labeled to easily
+ * keep track of where each piece came from. */
+
+/* css reset from 1140 grid system */
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,address,cite,code,del,dfn,em,img,ins,q,small,strong,sub,sup,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td
+{ border:0; margin:0; padding:0 }
+article,aside,figure,figure img,figcaption,hgroup,footer,header,nav,section,video,object
+{ display:block }
+a img
+{ border:0 }
+figure
+{ position:relative }
+figure img
+{ width:100% }
+
 /*
  * HTML5 Boilerplate
  *
@@ -213,37 +229,142 @@ td { vertical-align: top; }
 
 .chromeframe { margin: 0.2em 0; background: #ccc; color: black; padding: 0.2em 0; }
 
-
-/* ==|== primary styles =====================================================
-   Author:
-   ========================================================================== */
+/* SUSPEND HTML5 BOILERPLATE */
 
 
+/* ==================================================================================================================== */
+/* ! The 1140px Grid V2 by Andy Taylor \ http://cssgrid.net \ http://www.twitter.com/andytlr \ http://www.andytlr.com   */
+/* ==================================================================================================================== */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ==|== media queries ======================================================
-   EXAMPLE Media Query for Responsive Design.
-   This example overrides the primary ('mobile first') styles
-   Modify as content requires.
-   ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
+.container {
+padding-left: 20px;
+padding-right: 20px;
 }
 
+.row {
+width: 100%;
+max-width: 1140px;
+min-width: 755px;
+margin: 0 auto;
+overflow: hidden;
+}
 
+.onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol {
+margin-right: 3.8%;
+float: left;
+min-height: 1px;
+}
+
+.row .onecol {
+width: 4.85%;
+}
+
+.row .twocol {
+width: 13.45%;
+}
+
+.row .threecol {
+width: 22.05%;
+}
+
+.row .fourcol {
+width: 30.75%;
+}
+
+.row .fivecol {
+width: 39.45%;
+}
+
+.row .sixcol {
+width: 48%;
+}
+
+.row .sevencol {
+width: 56.75%;
+}
+
+.row .eightcol {
+width: 65.4%;
+}
+
+.row .ninecol {
+width: 74.05%;
+}
+
+.row .tencol {
+width: 82.7%;
+}
+
+.row .elevencol {
+width: 91.35%;
+}
+
+.row .twelvecol {
+width: 100%;
+float: left;
+}
+
+.last {
+margin-right: 0px;
+}
+
+img, object, embed {
+max-width: 100%;
+}
+
+img {
+	height: auto;
+}
+
+/* Smaller screens */
+@media only screen and (max-width: 1023px) {
+	body {
+	font-size: 0.8em;
+	line-height: 1.5em;
+	}
+	
+}
+
+/* Mobile */
+@media handheld, only screen and (max-width: 767px) {
+	body {
+	font-size: 16px;
+	-webkit-text-size-adjust: none;
+	}
+	
+	.row, body, .container {
+	width: 100%;
+	min-width: 0;
+	margin-left: 0px;
+	margin-right: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	}
+	
+	.row .onecol, .row .twocol, .row .threecol, .row .fourcol, .row .fivecol, .row .sixcol, .row .sevencol, .row .eightcol, .row .ninecol, .row .tencol, .row .elevencol, .row .twelvecol {
+	width: auto;
+	float: none;
+	margin-left: 0px;
+	margin-right: 0px;
+	padding-left: 20px;
+	padding-right: 20px;
+	}
+}
+
+/* ==|== primary styles =====================================================
+ * 
+   Author: Mark Drago
+   ========================================================================== */
+
+body { background-image: url('../img/limestone.jpg'); }
+
+
+
+
+
+
+
+/* RESUME HTML5 BIOLERPLATE */
 
 /* ==|== non-semantic helper classes ========================================
    Please define your styles before this section.
@@ -269,7 +390,6 @@ td { vertical-align: top; }
 .clearfix:before, .clearfix:after { content: ""; display: table; }
 .clearfix:after { clear: both; }
 .clearfix { *zoom: 1; }
-
 
 
 /* ==|== print styles =======================================================
