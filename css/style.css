@@ -357,14 +357,11 @@ img {
    ========================================================================== */
 
 body {
-    background-color: black;
+    background-color: #576e86;
 }
 
 header {
     border-bottom: 5px solid black;
-}
-
-header .row {
     background-color: #e0e0e0;
 }
 
