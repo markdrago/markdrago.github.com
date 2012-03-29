@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "A Pragmatic Exploration of Tech Debt"
-date: 2012-03-27 19:14
+date: 2012-04-02 7:25
 comments: true
 published: false
 ---
@@ -10,7 +10,7 @@ This post explores the concept of tech debt.  In particular I would like to dise
 
 ###Defining Tech Debt
 {%pullquote%}
-First things first, we should agree on what it is we're talking about.  The term tech debt gets used in a ton of different ways and situations.  Tech debt is that old system that is big, buggy, and still in use for various reasons; it's that area of the code base that has been poked and prodded for so long by so many people that it is a rats nest in to which no one wants to voyage; it's that quick hack you put in just the other day that made you cringe when you did it but doing it "the right way" would have taken weeks; it's that system that is otherwise fine but lacks any unit tests so making changes is a tight-rope walk; it's the system that was meant to be a prototype which is now used in production.  Tech debt is a lot of things.  To generalize this to a single definition is complicated.  The definition I have come up with is "{"tech debt is code which a reasonable engineer, in the present, wishes was different"}".  I'll agree that this definition is a little shaky as it is based on the subjective opinion of an imagined engineer, but it's what I'm going with.
+First things first, we should agree on what it is we're talking about.  The term tech debt gets used in a ton of different ways and situations.  Tech debt is that old system that is big, buggy, and still in use for various reasons; it's that area of the code base that has been poked and prodded for so long and by so many people that it is a rats nest in to which no one wants to voyage; it's that quick hack you put in just the other day that made you cringe when you did it but doing it "the right way" would have taken weeks; it's that system that is otherwise fine but lacks any unit tests so making changes is a tight-rope walk; it's that system which was meant to be a prototype and is now used in production.  Tech debt is a lot of things.  To generalize this to a single definition is complicated.  The definition I have come up with is "{"tech debt is code which a reasonable engineer, in the present, wishes was different"}".  I'll agree that this definition is a little shaky as it is based on the subjective opinion of an imagined engineer, but it's what I'm going with.
 {%endpullquote%}
 
 ###How Tech Debt is Born
@@ -45,16 +45,19 @@ You could argue that you'll be able to handle changes that your company may make
 Adding abstractions is an important practice in designing any system.  But there is a cost associated with every abstraction that you add.  Prematurely adding layers of abstraction is especially dangerous as you're likely to spend more time adding the abstraction layer and, if you do not correctly predict the future, you're ultimately going to have to clean up both the main business logic and the abstraction layer.  In trying to avoid tech debt you may very well be creating even more.  In my opinion layers of indirection should be added once you have the second thing that will benefit from that abstraction.  That's not a hard and fast rule as there are plenty of times where common sense and just good engineering necessitates an abstraction.  {""Premature abstraction is the yin to premature optimization's yang.""}  --<a href="http://twitter.com/#!/KentBeck/statuses/167620773337505793">Kent Beck</a>
 {% endpullquote %}
 
-###Desirable Tech Debt
+####Desirable Tech Debt
 Finally, we arrive at the kind of tech debt that is the most controversial.  This is the tech debt that you take on consciously.  This is where you know there are a few ways to go about coding the solution you're working on and you consciously choose the quicker or easier way, knowing full well what you're doing.  This kind of tech debt is a shortcut that you take now and will have to deal with later.  This is true of pretty much all debt.  Lets compare this kind of debt to a mortgage.
 
 When you take out a mortgage you are taking a shortcut.  Rather than slowly building up the stockpile of cash that you will need to buy a house in cash you're able to buy the house immediately.  This is nice because you'll be able to enjoy the house during the 20 years or so it would have taken you to save up the cash to buy the house without the mortgage.  The situation with tech debt is very similar.  You're taking a shortcut and enjoying the new feature more quickly than you would otherwise be able to enjoy it.  Depending on your business and the feature you're building this could have a profound impact on your business.
 
 Just like taking out a mortgage, taking on tech debt can be a big decision.  It's important that you weigh the benefits that you'll be enjoying against the pain that you will be experiencing.  It's not okay to go traipsing through your code base creating havoc for little-to-no gain.  Likewise, it's not okay to always be demanding perfection and holding back otherwise realizable value.  There's a balance that needs to be struck.
 
+###Debt Management
+Lets keep the tech debt / mortgage analogy alive for a bit as we discuss ways of dealing with tech debt.
+
 ####Repayment
 {%pullquote%}
-All debt has to be repaid and tech debt is no different.  It is absolutely critical that you have time set aside to pay down tech debt.  Trying to skimp on repayment of tech debt leads down one of two disasterous paths.  One path leads to a code base that is riddled with tech debt.  So many shortcuts have been taken and ignored that you can't even get the simplest of things done.  The other path leads to a beautiful code base, but doing everything perfectly has been an incredible burden.  While you were busy saving up to buy your first house your competition took out a mortgage, bought a house, has the whole thing beautifully furnished, is throwing a party, and has nearly paid back the loan already.  {"Having a plan set up to pay back tech debt lets you take important shortcuts."}
+All debt has to be repaid and tech debt is no different.  It is absolutely critical that you have time set aside to pay down tech debt.  Trying to skimp on repayment of tech debt leads down one of two disasterous paths.  One path leads to a code base that is riddled with tech debt.  So many shortcuts have been taken and ignored that you can't even get the simplest of things done.  The other path leads to a beautiful code base, but doing everything perfectly has been an incredible burden.  While you were busy saving up to buy your first house your competition took out a mortgage, bought a house, has the whole thing beautifully furnished, is throwing a party, and has nearly paid back the loan already.  {"Having a plan set up to pay back tech debt lets you take important shortcuts."}  This is the reason why your business should be excited to set aside time to pay down tech debt.  The productivity hit that results from reserving 20% of engineering time for tech debt repayment will be more than made up for by being able to deliver value more quickly by taking shortcuts.
 {%endpullquote%}
 
 ####Amortization Plan
@@ -62,6 +65,14 @@ All debt has to be repaid and tech debt is no different.  It is absolutely criti
 Along with debt comes interest payments.  {"The interest that you pay on tech debt is the loss in productivity that results from the tech debt's existence."}  The worse the tech debt, the higher the interest.  But how should we be comparing one chunk of tech debt with another?  The interest on tech debt should always be in terms of pain.  Code that everyone agrees is poorly designed, but that isn't generating bugs or being actively worked on, is not causing a lot of pain.  Inversely, code which at first glance seems reasonable, but is creating headaches for everyone that is working on it, is creating a lot of pain.  So, which tech debt should be paid back first?  Easy - the debt that has the highest interest payments / is causing the most pain.
 {%endpullquote%}
 
-###Final Payment
-Debt can be a useful tool in financial planning and it can be a useful tool in software engineering.  Ultimately the job of software engineers (and really any employee) is to generate business value.  If you find yourself in the position where you can take on a reasonable amount of low-interest tech debt and deliver important value to the business you should be proud to make the decision to take it on.  Tech debt can be a powerful tool, and like all powerful tools, should be used wisely.  But it would be a shame to leave it unused.
+####Bankruptcy
+Failure is always an option, and sometimes deciding to rewrite the system that you have is the right choice.  Just like foreclosing on a mortgage will damage your credit, rewriting a non-trivial system will severly impact your ability to deliver new value to the business for a long period of time.  This is why making such a decision should be done rarely and only after considerable thought.  However, it will be the right decision in some cases; like if the team or the business is changing dramatically or perhaps after a merger.
 
+###Final Payment
+Debt can be a useful tool in financial planning and it can be a useful tool in software engineering.  Ultimately the job of software engineers (and really any employee) is to generate business value.  If you find yourself in the position where you can take on a reasonable amount of low-interest tech debt and deliver important value to the business you should be proud to make the decision to take it on.  Tech debt can be a powerful tool, and like all powerful tools, should be used wisely.
+
+
+
+
+#####Thank Yous
+Thanks to Dennis Lipovsky for proof-reading and giving me the idea for the section on bankruptcy.
