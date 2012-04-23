@@ -1,9 +1,8 @@
 ---
 layout: post
 title: "A Pragmatic Exploration of Tech Debt"
-date: 2012-04-02 7:25
+date: 2012-04-23 16:34
 comments: true
-published: false
 ---
 
 This post explores the concept of tech debt.  In particular I would like to disect the jumbled notion of tech debt and discuss each discreet concept in detail.  In some ways you can think of this essay as a refactoring of the idea of tech debt.
