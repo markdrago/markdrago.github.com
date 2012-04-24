@@ -4,7 +4,7 @@
   <title><![CDATA[Mark Drago's Blog]]></title>
   <link href="http://markdrago.github.com/atom.xml" rel="self"/>
   <link href="http://markdrago.github.com/"/>
-  <updated>2012-04-23T16:35:38-04:00</updated>
+  <updated>2012-04-24T11:20:18-04:00</updated>
   <id>http://markdrago.github.com/</id>
   <author>
     <name><![CDATA[Mark Drago]]></name>
@@ -18,7 +18,7 @@
     <link href="http://markdrago.github.com/blog/2012/04/23/a-pragmatic-exploration-of-tech-debt/"/>
     <updated>2012-04-23T16:34:00-04:00</updated>
     <id>http://markdrago.github.com/blog/2012/04/23/a-pragmatic-exploration-of-tech-debt</id>
-    <content type="html"><![CDATA[<p>This post explores the concept of tech debt.  In particular I would like to disect the jumbled notion of tech debt and discuss each discreet concept in detail.  In some ways you can think of this essay as a refactoring of the idea of tech debt.</p>
+    <content type="html"><![CDATA[<p>This post explores the concept of tech debt.  In particular I would like to dissect the jumbled notion of tech debt and discuss each discrete concept in detail.  In some ways you can think of this essay as a refactoring of the idea of tech debt.</p>
 
 <h3>Defining Tech Debt</h3>
 
