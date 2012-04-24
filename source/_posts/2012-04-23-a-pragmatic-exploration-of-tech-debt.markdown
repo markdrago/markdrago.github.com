@@ -5,7 +5,7 @@ date: 2012-04-23 16:34
 comments: true
 ---
 
-This post explores the concept of tech debt.  In particular I would like to disect the jumbled notion of tech debt and discuss each discreet concept in detail.  In some ways you can think of this essay as a refactoring of the idea of tech debt.
+This post explores the concept of tech debt.  In particular I would like to dissect the jumbled notion of tech debt and discuss each discrete concept in detail.  In some ways you can think of this essay as a refactoring of the idea of tech debt.
 
 ###Defining Tech Debt
 {%pullquote%}
