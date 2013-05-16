@@ -1,0 +1,26 @@
+When cloning to a new machine you actually need to run:
+  rake setup_github_pages
+
+in order to be able to deploy back to github.  This sets up the weird
+situation where the _deploy directory on the source branch holds a
+copy of the same git repository but checked out to the master branch.  Then,
+when running 'rake generate' from the source branch it will deploy to the
+_deploy directory.  Running 'rake deploy' will basically cd in to that
+directory and do the committing & pushing.  So, the directory tree should
+look like this:
+
+(source branch)/
+(source branch)/Rakefile (and all the other octopress stuff)
+(source branch)/_deploy
+(source branch)/_deploy/(master branch)
+(source branch)/_deploy/(master branch)/assets (and all other blog stuff)
+
+Another way of checking is, from the top directory on the source branch:
+
+$ cat .git/HEAD
+ref: refs/heads/source
+$ cat _deploy/.git/HEAD
+ref: refs/heads/master
+
+If that second command fails, you probably need to run:
+  rake setup_github_pages
