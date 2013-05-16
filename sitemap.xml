@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
+    <url>
+        <loc>
+            http://markdrago.github.io/blog/2012/04/23/a-pragmatic-exploration-of-tech-debt/
+        </loc>
+        <lastmod>2013-05-16T08:38:05-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://markdrago.github.io/robots.txt</loc>
+        <lastmod>2013-05-16T08:38:05-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://markdrago.github.io/blog/archives/</loc>
+        <lastmod>2013-05-16T08:38:05-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://markdrago.github.io/</loc>
+        <lastmod>2013-05-16T08:38:05-04:00</lastmod>
+    </url>
+</urlset>
